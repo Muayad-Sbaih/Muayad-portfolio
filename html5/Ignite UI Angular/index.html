@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Banner Sizes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        /* Style for the Back button */
+        .back-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #ff5733;
+        }
+
+        .banner-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        iframe {
+            border: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .banner p {
+            font-size: 14px;
+            color: #333;
+        }
+        /* Add styles for the reload icon */
+        .banner {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            width: auto;  /* Dynamic width based on iframe */
+        }
+
+        .reload-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #ff5733; /* لون الأيقونة */
+            background-color: transparent; /* خلفية شفافة */
+            border-radius: 50%;
+            padding: 2px;
+            border: 1.5px solid rgba(255, 255, 255, 0.5); /* حدود شفافة لإبراز الأيقونة */
+            opacity: 0; /* بداية، الأيقونة مخفية */
+            transition: opacity 0.3s ease; /* إضافة تأثير عند إظهار الأيقونة */
+        }
+
+        .banner:hover .reload-icon {
+            opacity: 1; /* عند التمرير على البانر، الأيقونة تظهر */
+        }
+
+        .reload-icon:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* تأثير عند التمرير فوق الأيقونة */
+        }
+    </style>
+    <!-- Link to Font Awesome for reload and back icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+
+<body>
+
+    <!-- Back Icon added here -->
+    <i class="back-icon fas fa-arrow-left" onclick="goBack()"></i>
+
+    <h1>HTML5 Banner Sizes</h1>
+    
+    <div class="banner-container">
+        <!-- Vertical Banners (عمودية) -->
+        <div class="banner">
+            <i class="reload-icon fas fa-sync-alt" onclick="reloadIframe(this)"></i>
+            <iframe id="iframe_160x600" src="app-builder_160x600/app-builder_160x600.html" width="160" height="600"></iframe>
+            <p>160x600</p>
+        </div>
+
+        <div class="banner">
+            <i class="reload-icon fas fa-sync-alt" onclick="reloadIframe(this)"></i>
+            <iframe id="iframe_300x600" src="app-builder_300x600/app-builder_300x600.html" width="300" height="600"></iframe>
+            <p>300x600</p>
+        </div>
+
+        <!-- Square Banners (مربعة) -->
+        <div class="banner">
+            <i class="reload-icon fas fa-sync-alt" onclick="reloadIframe(this)"></i>
+            <iframe id="iframe_300x250" src="app-builder_300x250/app-builder_300x250.html" width="300" height="250"></iframe>
+            <p>300x250</p>
+        </div>
+
+        <div class="banner">
+            <i class="reload-icon fas fa-sync-alt" onclick="reloadIframe(this)"></i>
+            <iframe id="iframe_970x250" src="app-builder_970x250/app-builder_970x250.html" width="970" height="250"></iframe>
+            <p>970x250</p>
+        </div>
+
+        <div class="banner">
+            <i class="reload-icon fas fa-sync-alt" onclick="reloadIframe(this)"></i>
+            <iframe id="iframe_970x90" src="app-builder_970x90/app-builder_970x90.html" width="970" height="90"></iframe>
+            <p>970x90</p>
+        </div>
+
+        <!-- Horizontal Banners (أفقية) -->
+        <div class="banner">
+            <i class="reload-icon fas fa-sync-alt" onclick="reloadIframe(this)"></i>
+            <iframe id="iframe_728x90" src="app-builder_728x90/app-builder_728x90.html" width="728" height="90"></iframe>
+            <p>728x90</p>
+        </div>
+
+        <div class="banner">
+            <i class="reload-icon fas fa-sync-alt" onclick="reloadIframe(this)"></i>
+            <iframe id="iframe_468x60" src="app-builder_468x60/app-builder_468x60.html" width="468" height="60"></iframe>
+            <p>468x60</p>
+        </div>
+
+        <div class="banner">
+            <i class="reload-icon fas fa-sync-alt" onclick="reloadIframe(this)"></i>
+            <iframe id="iframe_320x50" src="app-builder_320x50/app-builder_320x50.html" width="320" height="50"></iframe>
+            <p>320x50</p>
+        </div>
+
+        <div class="banner">
+            <i class="reload-icon fas fa-sync-alt" onclick="reloadIframe(this)"></i>
+            <iframe id="iframe_300x50" src="app-builder_300x50/app-builder_300x50.html" width="300" height="50"></iframe>
+            <p>300x50</p>
+        </div>
+        
+    </div>
+
+    <script>
+        // JavaScript function to reload iframe
+        function reloadIframe(icon) {
+            var iframe = icon.closest('.banner').querySelector('iframe');
+            iframe.contentWindow.location.reload();
+        }
+
+        // JavaScript function for Back Button
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+</body>
+</html>

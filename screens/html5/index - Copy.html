@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Page</title>
+   
+    <style>
+        /* ضبط الصفحة لتتكيف مع iframe */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        
+            font-family: Arial, sans-serif;
+            box-sizing: border-box; /* لضمان تناسب المحتوى */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; /* عرض الصور في صفوف */
+            align-items: center; /* محاذاة الصور أفقيًا */
+            gap: 5px; /* مسافة بين الصفوف */
+            padding: 10px;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box; /* منع تجاوز المحتوى */
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: start;
+            gap: 20px; /* مسافة بين الصور داخل الصف */
+            flex-wrap: wrap;
+        }
+
+        .image-row img {
+           
+
+            width: 300px;
+            height: 150px;
+            object-fit: cover; /* ضبط تناسب الصور */
+        }
+
+        .image-row p {
+            font-size: 14px;
+            color: white;
+            font-weight: 500;
+            text-align: center; /* محاذاة النص في المنتصف */
+            width: 300px;
+        }
+.html5Element {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: normal;
+    border: 1px solid #878787; /* تحديد اللون وسمك الإطار */
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer; 
+   
+    
+    
+   
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ff7e5f, #ffae42);
+}
+
+.html5Element:hover {
+     transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(45deg, #ffae42, #ff7e5f);
+}
+
+
+    </style>
+
+    
+ <script>
+
+const bannersList = {};
+
+const addbannersList = (setName, setPath) => {
+  bannersList[setName] = bannersList[setName] || { setName, setPath, bannersList: {} }; // إذا لم تكن مجموعة البانرات موجودة، يتم إنشاؤها
+};
+
+
+const addBanner = (setName, bannerName, bannerPath, bannerWidth, bannerHeight) => {
+  if (!bannersList[setName]) {
+    console.log(`Banner set "${setName}" does not exist. Please add it first.`);
+    return;
+  }
+  bannersList[setName].bannersList[bannerName] = { bannerName, bannerPath, bannerDim: { w: bannerWidth, h: bannerHeight } };
+};
+
+
+
+fetch('http://localhost:3001/dirpath')
+            .then(response => response.json())
+            .then(html5banerPaths => {
+
+
+                html5banerPaths.forEach(html5banerPath => {
+                //    console.log("html5banerPath"+html5banerPath);
+
+                createImageDiv(html5banerPath);
+
+
+                })
+
+
+            }) .catch(error => {
+                console.error('Error fetching  paths:', error);
+            });
+
+
+function createImageDiv(folderPath) {
+
+    const banners =  fetchFolders(folderPath);
+    const dimRegex = /(\d+)[xX](\d+)$/;
+ 
+    fetchFolders(folderPath)
+    .then(folders => {
+        
+            //insert set name into bannersList
+            bannerSetName = folderPath.match(/([^/]+)$/)[1];
+            addbannersList(bannerSetName, folderPath);
+           
+
+        folders.forEach(element => {
+            const extractedDim  = element.match(dimRegex);
+            //console.log(element);
+            //addBanner(bannerSetName, "banner1", "/path/to/banner1", 160, 600);
+            addBanner(bannerSetName, element, folderPath+element, extractedDim[1], extractedDim[2]);
+            console.log(JSON.stringify(bannersList, null, 2));
+            // console.log('w:'+extractedDim[1],'h:'+extractedDim[2]);
+        });
+
+      //  console.log('Received Folders:', folders);
+        // التعامل مع المجلدات هنا
+    })
+    .catch(error => {
+        console.error('Error fetching folders:', error);
+    });
+
+
+
+
+
+   // console.log(folderPath);
+    imgPath = folderPath + '/thumb.jpg';
+    
+    const div = document.createElement('div');
+    div.classList.add('html5Element');
+
+    div.setAttribute('onclick', `window.location.href='${folderPath}';`);
+    const imgElement = document.createElement('img');
+    const pElement = document.createElement('p');
+   
+    const regex = /([^/]+)$/;
+    const folder_name = folderPath.match(regex);
+    
+    pElement.textContent = folder_name[1].replace(/[_-]|html5/gi, ' ').trim().replace(/\s+/g, ' ');
+    
+   
+
+    imgElement.src = imgPath;
+    div.appendChild(imgElement);
+    div.appendChild(pElement);
+    document.getElementById('thumb-img').appendChild(div);
+
+    return div;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// إضافة مجموعة بانرات وبانرات جديدة
+//addBannerSet("bannerSet1", "/path/to/bannerSet1");
+//addBanner("bannerSet1", "banner1", "/path/to/banner1", 160, 600);
+//addBanner("bannerSet1", "banner2", "/path/to/banner2", 300, 250);
+
+//addBannerSet("bannerSet2", "/path/to/bannerSet2");
+//addBanner("bannerSet2", "banner3", "/path/to/banner3", 320, 50);
+//addBanner("bannerSet2", "banner4", "/path/to/banner4", 970, 250);
+
+// عرض النتيجة النهائية
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+<div id="tests"></div>
+
+
+
+
+<script>
+    /*
+function fetchFolders(directoryPath) {
+  
+
+    fetch('http://localhost:3001/get-dims', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ path: directoryPath }) // إرسال المسار كـ JSON
+    })
+    .then(response => response.json())
+    .then(data => {
+        resolve(data.folders);
+        console.log('Folders:', data.folders); // عرض المجلدات في الـ Console
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+
+
+*/
+
+
+function fetchFolders(directoryPath) {
+    return new Promise((resolve, reject) => {
+        fetch('http://localhost:3001/get-dims', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ path: directoryPath }) // إرسال المسار كـ JSON
+        })
+        .then(response => {
+            // تحقق إذا كانت الاستجابة ناجحة
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json(); // تحويل الرد إلى JSON
+        })
+        .then(data => {
+            if (data && Array.isArray(data.folders)) {
+                resolve(data.folders); // تخزين المجلدات وإرجاعها
+            } else {
+                reject('Invalid data structure received');
+            }
+        })
+        .catch(error => {
+            reject(error); // التعامل مع الأخطاء
+        });
+    });
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    .clickable-div {
+        padding: 20px;
+        background-color: #ffae42;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 200px;
+        margin: 20px auto;
+    }
+
+    .clickable-div:hover {
+        background-color: #ff9f24;
+    }
+
+    .output {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+
+</head>
+<body>
+
+
+    <div class="container">
+        <!-- الصف الأول من الصور -->
+        <div class="image-row" id="thumb-img"> 
+
+
+        </div>
+  
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<meta name="ad.size" content="width=300,height=600">
+		<meta charset="UTF-8">
+		<meta name="authoring-tool" content="Adobe_Animate_CC">
+		<title>HEL004_300x600MB_Peter</title>
+		<style>
+			html, body{
+				margin: 0;
+				padding: 0;
+				background-color: #FFFFFF;
+			}
+			#canvas{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+				 user-select: none;
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+				cursor: pointer;
+			}
+			#border{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				width: calc(300px - 2px);
+				height: calc(600px - 2px);
+				border: 0px solid #CCCCCC;
+				pointer-events: none;
+			}
+		</style>
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/createjs_2019.11.15_min.js"></script>
+<script src="HEL004_300x600MB_Peter.js"></script>
+<script>
+// Global Scripts
+	myCounter=1;</script>
+<script>
+var clickTag = "http://www.google.com",
+canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("B915F0BB2CAF214394D0C3C0B5CA43BE");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }
+}
+function handleComplete(evt,comp) {
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib.HEL004_300x600MB_Peter();
+	stage = new lib.Stage(canvas);
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage);
+	}
+	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+</head>
+<body onload="init();" style="margin:0px;">
+	<div id="animation_container" onclick="window.open(window.clickTag)" style="background-color:rgba(255, 255, 255, 1.00); width:300px; height:600px; cursor:pointer;">
+		<canvas id="canvas" width="300" height="600" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:300px; height:600px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Page</title>
+   
+    <style>
+        /* ضبط الصفحة لتتكيف مع iframe */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        
+            font-family: Arial, sans-serif;
+            box-sizing: border-box; /* لضمان تناسب المحتوى */
+        }
+
+        .container {
+            display: flex;
+            
+            gap: 5px; /* مسافة بين الصفوف */
+            padding: 10px;
+            width: 100%;
+            height: 100vh;
+            box-sizing: border-box; /* منع تجاوز المحتوى */
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: start;
+            gap: 20px; /* مسافة بين الصور داخل الصف */
+            flex-wrap: wrap;
+        }
+
+        .image-row img {
+           
+
+            width: 300px;
+            height: 150px;
+            object-fit: cover; /* ضبط تناسب الصور */
+        }
+
+        .image-row p {
+            font-size: 14px;
+            color: white;
+            font-weight: 500;
+            text-align: center; /* محاذاة النص في المنتصف */
+            width: 300px;
+        }
+.html5Element {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: normal;
+    border: 1px solid #878787; /* تحديد اللون وسمك الإطار */
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer; 
+   
+    
+    
+   
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ff7e5f, #ffae42);
+}
+
+.html5Element:hover {
+     transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(45deg, #ffae42, #ff7e5f);
+}
+
+
+
+    .iframe-content {
+    flex-wrap: wrap;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 100px;
+}
+
+.html5Element {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: normal;
+    border: 1px solid #878787;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ff7e5f, #ffae42);
+}
+
+.html5Element img {
+  width: 200px;
+}
+
+.html5Element p {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  text-align: center;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+
+
+
+
+
+
+
+
+        
+</style>
+
+
+
+<script>
+
+
+const bannersList = {};
+const folderPath = '/screens/html5/banners/';
+
+
+const readJson = async (file) => {
+  try {
+    const response = await fetch(file); // الانتظار حتى تنتهي عملية جلب البيانات
+    const data = await response.json(); // الانتظار حتى يتم تحويل الاستجابة إلى JSON
+    return data; // إرجاع البيانات
+  } catch (error) {
+    console.log('Error reading JSON file:', error);
+  }
+};
+
+
+// استدعاء الدالة الرئيسية
+(async () => {
+  try {
+
+
+//  console.log(bannersJsonData["HTML5-reveal-demandbase-pipeline-teas"].banners);
+    const bannersJsonData = await readJson('output.json'); 
+
+    const divContainer = document.getElementById('container');
+    const bannersView = document.getElementById('bannersView');
+    const bannersView_list = [];
+    let htmlContent = '';
+    let htmlSubContent = '';
+    htmlContent = '<div class="iframe-content" id="contentContainer">'   
+    
+    for (const setName in bannersJsonData) {
+      
+      //console.log(bannersJsonData[setName].banners);
+      const bSet = bannersJsonData[setName];
+      
+      const bsetName = setName.replace(/[_-]|html5/gi, ' ').trim().replace(/\s+/g, ' ');
+      htmlSubContent=`<h1>${bsetName} Banners</h1>`;
+/*       <div class="html5Elementss" id="${setName}"  onclick=" handleClick(setName)" > */
+      htmlContent += `
+        <div class="html5Element" id="${setName}" >
+          <img src="${bSet.setPath}thumb.jpg">
+            <p>${bsetName}</p>
+        </div>
+      `;
+     
+            
+                for (const bannerName in bSet.banners) {
+                  const banner = bSet.banners[bannerName];
+                  htmlSubContent +=`
+                  <div class ="bannerBlock">
+                  
+                  <iframe id="${bannerName}" src="${bSet.setPath+bannerName}" width="${banner.dimensions.width}" height="${banner.dimensions.height}"></iframe>
+                  <p>${bannerName.replace(/[_-]|html5/gi, ' ').trim().replace(/\s+/g, ' ')}</p>
+                  </div> `;
+   
+                }
+                bannersView_list[setName] = htmlSubContent;
+
+
+
+    divContainer.innerHTML = htmlContent;
+    //bannersView.innerHTML = htmlSubContent;
+
+
+}//endfor
+
+addClickListeners(bannersView_list);
+
+
+  } catch (error) { console.error('Error in main execution:', error); }
+})();
+
+
+
+ function addClickListeners(viewCode) {
+  //console.log(viewCode);
+  const divContainer = document.getElementById('container');
+
+
+
+
+  divContainer.addEventListener('click', (event) => {
+    // التأكد من أن العنصر الذي تم النقر عليه يحتوي على class "html5Element"
+    if (event.target.closest('.html5Element')) {
+     // console.log(event.target.closest('.html5Element').id);
+  
+      bannersView.innerHTML = viewCode[event.target.closest('.html5Element').id];
+    
+    } else {
+      console.log('Clicked on a non-target element:', event.target);
+    }
+
+  });
+
+
+}
+
+</script>
+
+
+</head>
+<body>
+  <main class="container" id="maincontainer">
+    <div class="container" id="container"></div>
+    <div class="bannersView" id="bannersView">
+
+    </div>
+  </main>
+</body>
+</html>

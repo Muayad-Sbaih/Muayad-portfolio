@@ -1,0 +1,438 @@
+{
+  "App-Builder-HTML5": {
+    "setName": "App-Builder-HTML5",
+    "setPath": "/screens/html5/banners/App-Builder-HTML5/",
+    "banners": {
+      "app-builder_160x600": {
+        "bannerName": "app-builder_160x600",
+        "bannerPath": "/screens/html5/banners/App-Builder-HTML5/app-builder_160x600",
+        "dimensions": {
+          "width": 160,
+          "height": 600
+        }
+      },
+      "app-builder_300x250": {
+        "bannerName": "app-builder_300x250",
+        "bannerPath": "/screens/html5/banners/App-Builder-HTML5/app-builder_300x250",
+        "dimensions": {
+          "width": 300,
+          "height": 250
+        }
+      },
+      "app-builder_300x50": {
+        "bannerName": "app-builder_300x50",
+        "bannerPath": "/screens/html5/banners/App-Builder-HTML5/app-builder_300x50",
+        "dimensions": {
+          "width": 300,
+          "height": 50
+        }
+      },
+      "app-builder_300x600": {
+        "bannerName": "app-builder_300x600",
+        "bannerPath": "/screens/html5/banners/App-Builder-HTML5/app-builder_300x600",
+        "dimensions": {
+          "width": 300,
+          "height": 600
+        }
+      },
+      "app-builder_320x50": {
+        "bannerName": "app-builder_320x50",
+        "bannerPath": "/screens/html5/banners/App-Builder-HTML5/app-builder_320x50",
+        "dimensions": {
+          "width": 320,
+          "height": 50
+        }
+      },
+      "app-builder_336x280": {
+        "bannerName": "app-builder_336x280",
+        "bannerPath": "/screens/html5/banners/App-Builder-HTML5/app-builder_336x280",
+        "dimensions": {
+          "width": 336,
+          "height": 280
+        }
+      },
+      "app-builder_468x60": {
+        "bannerName": "app-builder_468x60",
+        "bannerPath": "/screens/html5/banners/App-Builder-HTML5/app-builder_468x60",
+        "dimensions": {
+          "width": 468,
+          "height": 60
+        }
+      },
+      "app-builder_728x90": {
+        "bannerName": "app-builder_728x90",
+        "bannerPath": "/screens/html5/banners/App-Builder-HTML5/app-builder_728x90",
+        "dimensions": {
+          "width": 728,
+          "height": 90
+        }
+      },
+      "app-builder_970x250": {
+        "bannerName": "app-builder_970x250",
+        "bannerPath": "/screens/html5/banners/App-Builder-HTML5/app-builder_970x250",
+        "dimensions": {
+          "width": 970,
+          "height": 250
+        }
+      },
+      "app-builder_970x90": {
+        "bannerName": "app-builder_970x90",
+        "bannerPath": "/screens/html5/banners/App-Builder-HTML5/app-builder_970x90",
+        "dimensions": {
+          "width": 970,
+          "height": 90
+        }
+      }
+    }
+  },
+  "HTML5-AMEX_DV360_v4": {
+    "setName": "HTML5-AMEX_DV360_v4",
+    "setPath": "/screens/html5/banners/HTML5-AMEX_DV360_v4/",
+    "banners": {
+      "AMEX_DV360_v4_160x600": {
+        "bannerName": "AMEX_DV360_v4_160x600",
+        "bannerPath": "/screens/html5/banners/HTML5-AMEX_DV360_v4/AMEX_DV360_v4_160x600",
+        "dimensions": {
+          "width": 160,
+          "height": 600
+        }
+      },
+      "AMEX_DV360_v4_300x250": {
+        "bannerName": "AMEX_DV360_v4_300x250",
+        "bannerPath": "/screens/html5/banners/HTML5-AMEX_DV360_v4/AMEX_DV360_v4_300x250",
+        "dimensions": {
+          "width": 300,
+          "height": 250
+        }
+      },
+      "AMEX_DV360_v4_300x600": {
+        "bannerName": "AMEX_DV360_v4_300x600",
+        "bannerPath": "/screens/html5/banners/HTML5-AMEX_DV360_v4/AMEX_DV360_v4_300x600",
+        "dimensions": {
+          "width": 300,
+          "height": 600
+        }
+      },
+      "AMEX_DV360_v4_320x50": {
+        "bannerName": "AMEX_DV360_v4_320x50",
+        "bannerPath": "/screens/html5/banners/HTML5-AMEX_DV360_v4/AMEX_DV360_v4_320x50",
+        "dimensions": {
+          "width": 320,
+          "height": 50
+        }
+      },
+      "AMEX_DV360_v4_728x90": {
+        "bannerName": "AMEX_DV360_v4_728x90",
+        "bannerPath": "/screens/html5/banners/HTML5-AMEX_DV360_v4/AMEX_DV360_v4_728x90",
+        "dimensions": {
+          "width": 728,
+          "height": 90
+        }
+      }
+    }
+  },
+  "HTML5-ignite-ui-angular-easily-handle-unlimited-rows": {
+    "setName": "HTML5-ignite-ui-angular-easily-handle-unlimited-rows",
+    "setPath": "/screens/html5/banners/HTML5-ignite-ui-angular-easily-handle-unlimited-rows/",
+    "banners": {
+      "ignite-ui-angular-easily-handle-unlimited-rows-160x600": {
+        "bannerName": "ignite-ui-angular-easily-handle-unlimited-rows-160x600",
+        "bannerPath": "/screens/html5/banners/HTML5-ignite-ui-angular-easily-handle-unlimited-rows/ignite-ui-angular-easily-handle-unlimited-rows-160x600",
+        "dimensions": {
+          "width": 160,
+          "height": 600
+        }
+      },
+      "ignite-ui-angular-easily-handle-unlimited-rows-300x250": {
+        "bannerName": "ignite-ui-angular-easily-handle-unlimited-rows-300x250",
+        "bannerPath": "/screens/html5/banners/HTML5-ignite-ui-angular-easily-handle-unlimited-rows/ignite-ui-angular-easily-handle-unlimited-rows-300x250",
+        "dimensions": {
+          "width": 300,
+          "height": 250
+        }
+      },
+      "ignite-ui-angular-easily-handle-unlimited-rows-300x50": {
+        "bannerName": "ignite-ui-angular-easily-handle-unlimited-rows-300x50",
+        "bannerPath": "/screens/html5/banners/HTML5-ignite-ui-angular-easily-handle-unlimited-rows/ignite-ui-angular-easily-handle-unlimited-rows-300x50",
+        "dimensions": {
+          "width": 300,
+          "height": 50
+        }
+      },
+      "ignite-ui-angular-easily-handle-unlimited-rows-300x600": {
+        "bannerName": "ignite-ui-angular-easily-handle-unlimited-rows-300x600",
+        "bannerPath": "/screens/html5/banners/HTML5-ignite-ui-angular-easily-handle-unlimited-rows/ignite-ui-angular-easily-handle-unlimited-rows-300x600",
+        "dimensions": {
+          "width": 300,
+          "height": 600
+        }
+      },
+      "ignite-ui-angular-easily-handle-unlimited-rows-320x50": {
+        "bannerName": "ignite-ui-angular-easily-handle-unlimited-rows-320x50",
+        "bannerPath": "/screens/html5/banners/HTML5-ignite-ui-angular-easily-handle-unlimited-rows/ignite-ui-angular-easily-handle-unlimited-rows-320x50",
+        "dimensions": {
+          "width": 320,
+          "height": 50
+        }
+      },
+      "ignite-ui-angular-easily-handle-unlimited-rows-336x280": {
+        "bannerName": "ignite-ui-angular-easily-handle-unlimited-rows-336x280",
+        "bannerPath": "/screens/html5/banners/HTML5-ignite-ui-angular-easily-handle-unlimited-rows/ignite-ui-angular-easily-handle-unlimited-rows-336x280",
+        "dimensions": {
+          "width": 336,
+          "height": 280
+        }
+      },
+      "ignite-ui-angular-easily-handle-unlimited-rows-468x60": {
+        "bannerName": "ignite-ui-angular-easily-handle-unlimited-rows-468x60",
+        "bannerPath": "/screens/html5/banners/HTML5-ignite-ui-angular-easily-handle-unlimited-rows/ignite-ui-angular-easily-handle-unlimited-rows-468x60",
+        "dimensions": {
+          "width": 468,
+          "height": 60
+        }
+      },
+      "ignite-ui-angular-easily-handle-unlimited-rows-728x90": {
+        "bannerName": "ignite-ui-angular-easily-handle-unlimited-rows-728x90",
+        "bannerPath": "/screens/html5/banners/HTML5-ignite-ui-angular-easily-handle-unlimited-rows/ignite-ui-angular-easily-handle-unlimited-rows-728x90",
+        "dimensions": {
+          "width": 728,
+          "height": 90
+        }
+      },
+      "ignite-ui-angular-easily-handle-unlimited-rows-970x250": {
+        "bannerName": "ignite-ui-angular-easily-handle-unlimited-rows-970x250",
+        "bannerPath": "/screens/html5/banners/HTML5-ignite-ui-angular-easily-handle-unlimited-rows/ignite-ui-angular-easily-handle-unlimited-rows-970x250",
+        "dimensions": {
+          "width": 970,
+          "height": 250
+        }
+      },
+      "ignite-ui-angular-easily-handle-unlimited-rows-970x90": {
+        "bannerName": "ignite-ui-angular-easily-handle-unlimited-rows-970x90",
+        "bannerPath": "/screens/html5/banners/HTML5-ignite-ui-angular-easily-handle-unlimited-rows/ignite-ui-angular-easily-handle-unlimited-rows-970x90",
+        "dimensions": {
+          "width": 970,
+          "height": 90
+        }
+      }
+    }
+  },
+  "HTML5-reveal-demandbase-pipeline-teas": {
+    "setName": "HTML5-reveal-demandbase-pipeline-teas",
+    "setPath": "/screens/html5/banners/HTML5-reveal-demandbase-pipeline-teas/",
+    "banners": {
+      "reveal-demandbase-pipeline-teas_160x600": {
+        "bannerName": "reveal-demandbase-pipeline-teas_160x600",
+        "bannerPath": "/screens/html5/banners/HTML5-reveal-demandbase-pipeline-teas/reveal-demandbase-pipeline-teas_160x600",
+        "dimensions": {
+          "width": 160,
+          "height": 600
+        }
+      },
+      "reveal-demandbase-pipeline-teas_300x250": {
+        "bannerName": "reveal-demandbase-pipeline-teas_300x250",
+        "bannerPath": "/screens/html5/banners/HTML5-reveal-demandbase-pipeline-teas/reveal-demandbase-pipeline-teas_300x250",
+        "dimensions": {
+          "width": 300,
+          "height": 250
+        }
+      },
+      "reveal-demandbase-pipeline-teas_300x50": {
+        "bannerName": "reveal-demandbase-pipeline-teas_300x50",
+        "bannerPath": "/screens/html5/banners/HTML5-reveal-demandbase-pipeline-teas/reveal-demandbase-pipeline-teas_300x50",
+        "dimensions": {
+          "width": 300,
+          "height": 50
+        }
+      },
+      "reveal-demandbase-pipeline-teas_300x600": {
+        "bannerName": "reveal-demandbase-pipeline-teas_300x600",
+        "bannerPath": "/screens/html5/banners/HTML5-reveal-demandbase-pipeline-teas/reveal-demandbase-pipeline-teas_300x600",
+        "dimensions": {
+          "width": 300,
+          "height": 600
+        }
+      },
+      "reveal-demandbase-pipeline-teas_320x50": {
+        "bannerName": "reveal-demandbase-pipeline-teas_320x50",
+        "bannerPath": "/screens/html5/banners/HTML5-reveal-demandbase-pipeline-teas/reveal-demandbase-pipeline-teas_320x50",
+        "dimensions": {
+          "width": 320,
+          "height": 50
+        }
+      },
+      "reveal-demandbase-pipeline-teas_336x280": {
+        "bannerName": "reveal-demandbase-pipeline-teas_336x280",
+        "bannerPath": "/screens/html5/banners/HTML5-reveal-demandbase-pipeline-teas/reveal-demandbase-pipeline-teas_336x280",
+        "dimensions": {
+          "width": 336,
+          "height": 280
+        }
+      },
+      "reveal-demandbase-pipeline-teas_468x60": {
+        "bannerName": "reveal-demandbase-pipeline-teas_468x60",
+        "bannerPath": "/screens/html5/banners/HTML5-reveal-demandbase-pipeline-teas/reveal-demandbase-pipeline-teas_468x60",
+        "dimensions": {
+          "width": 468,
+          "height": 60
+        }
+      },
+      "reveal-demandbase-pipeline-teas_728x90": {
+        "bannerName": "reveal-demandbase-pipeline-teas_728x90",
+        "bannerPath": "/screens/html5/banners/HTML5-reveal-demandbase-pipeline-teas/reveal-demandbase-pipeline-teas_728x90",
+        "dimensions": {
+          "width": 728,
+          "height": 90
+        }
+      },
+      "reveal-demandbase-pipeline-teas_970x250": {
+        "bannerName": "reveal-demandbase-pipeline-teas_970x250",
+        "bannerPath": "/screens/html5/banners/HTML5-reveal-demandbase-pipeline-teas/reveal-demandbase-pipeline-teas_970x250",
+        "dimensions": {
+          "width": 970,
+          "height": 250
+        }
+      },
+      "reveal-demandbase-pipeline-teas_970x90": {
+        "bannerName": "reveal-demandbase-pipeline-teas_970x90",
+        "bannerPath": "/screens/html5/banners/HTML5-reveal-demandbase-pipeline-teas/reveal-demandbase-pipeline-teas_970x90",
+        "dimensions": {
+          "width": 970,
+          "height": 90
+        }
+      }
+    }
+  },
+  "HTML5-Slingshot-growth-hacking": {
+    "setName": "HTML5-Slingshot-growth-hacking",
+    "setPath": "/screens/html5/banners/HTML5-Slingshot-growth-hacking/",
+    "banners": {
+      "slingshot-growth-hacking-160x600": {
+        "bannerName": "slingshot-growth-hacking-160x600",
+        "bannerPath": "/screens/html5/banners/HTML5-Slingshot-growth-hacking/slingshot-growth-hacking-160x600",
+        "dimensions": {
+          "width": 160,
+          "height": 600
+        }
+      },
+      "slingshot-growth-hacking-300x250": {
+        "bannerName": "slingshot-growth-hacking-300x250",
+        "bannerPath": "/screens/html5/banners/HTML5-Slingshot-growth-hacking/slingshot-growth-hacking-300x250",
+        "dimensions": {
+          "width": 300,
+          "height": 250
+        }
+      },
+      "slingshot-growth-hacking-300x50": {
+        "bannerName": "slingshot-growth-hacking-300x50",
+        "bannerPath": "/screens/html5/banners/HTML5-Slingshot-growth-hacking/slingshot-growth-hacking-300x50",
+        "dimensions": {
+          "width": 300,
+          "height": 50
+        }
+      },
+      "slingshot-growth-hacking-300x600": {
+        "bannerName": "slingshot-growth-hacking-300x600",
+        "bannerPath": "/screens/html5/banners/HTML5-Slingshot-growth-hacking/slingshot-growth-hacking-300x600",
+        "dimensions": {
+          "width": 300,
+          "height": 600
+        }
+      },
+      "slingshot-growth-hacking-320x50": {
+        "bannerName": "slingshot-growth-hacking-320x50",
+        "bannerPath": "/screens/html5/banners/HTML5-Slingshot-growth-hacking/slingshot-growth-hacking-320x50",
+        "dimensions": {
+          "width": 320,
+          "height": 50
+        }
+      },
+      "slingshot-growth-hacking-336x280": {
+        "bannerName": "slingshot-growth-hacking-336x280",
+        "bannerPath": "/screens/html5/banners/HTML5-Slingshot-growth-hacking/slingshot-growth-hacking-336x280",
+        "dimensions": {
+          "width": 336,
+          "height": 280
+        }
+      },
+      "slingshot-growth-hacking-468x60": {
+        "bannerName": "slingshot-growth-hacking-468x60",
+        "bannerPath": "/screens/html5/banners/HTML5-Slingshot-growth-hacking/slingshot-growth-hacking-468x60",
+        "dimensions": {
+          "width": 468,
+          "height": 60
+        }
+      },
+      "slingshot-growth-hacking-728x90": {
+        "bannerName": "slingshot-growth-hacking-728x90",
+        "bannerPath": "/screens/html5/banners/HTML5-Slingshot-growth-hacking/slingshot-growth-hacking-728x90",
+        "dimensions": {
+          "width": 728,
+          "height": 90
+        }
+      },
+      "slingshot-growth-hacking-970x250": {
+        "bannerName": "slingshot-growth-hacking-970x250",
+        "bannerPath": "/screens/html5/banners/HTML5-Slingshot-growth-hacking/slingshot-growth-hacking-970x250",
+        "dimensions": {
+          "width": 970,
+          "height": 250
+        }
+      },
+      "slingshot-growth-hacking-970x90": {
+        "bannerName": "slingshot-growth-hacking-970x90",
+        "bannerPath": "/screens/html5/banners/HTML5-Slingshot-growth-hacking/slingshot-growth-hacking-970x90",
+        "dimensions": {
+          "width": 970,
+          "height": 90
+        }
+      }
+    }
+  },
+  "Medicross_DV360": {
+    "setName": "Medicross_DV360",
+    "setPath": "/screens/html5/banners/Medicross_DV360/",
+    "banners": {
+      "Medicross_DV360_300x250": {
+        "bannerName": "Medicross_DV360_300x250",
+        "bannerPath": "/screens/html5/banners/Medicross_DV360/Medicross_DV360_300x250",
+        "dimensions": {
+          "width": 300,
+          "height": 250
+        }
+      },
+      "Medicross_DV360_300x600": {
+        "bannerName": "Medicross_DV360_300x600",
+        "bannerPath": "/screens/html5/banners/Medicross_DV360/Medicross_DV360_300x600",
+        "dimensions": {
+          "width": 300,
+          "height": 600
+        }
+      },
+      "Medicross_DV360_320x50": {
+        "bannerName": "Medicross_DV360_320x50",
+        "bannerPath": "/screens/html5/banners/Medicross_DV360/Medicross_DV360_320x50",
+        "dimensions": {
+          "width": 320,
+          "height": 50
+        }
+      },
+      "Medicross_DV360_500x1000": {
+        "bannerName": "Medicross_DV360_500x1000",
+        "bannerPath": "/screens/html5/banners/Medicross_DV360/Medicross_DV360_500x1000",
+        "dimensions": {
+          "width": 500,
+          "height": 1000
+        }
+      },
+      "Medicross_DV360_970x250": {
+        "bannerName": "Medicross_DV360_970x250",
+        "bannerPath": "/screens/html5/banners/Medicross_DV360/Medicross_DV360_970x250",
+        "dimensions": {
+          "width": 970,
+          "height": 250
+        }
+      }
+    }
+  }
+}
